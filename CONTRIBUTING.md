@@ -40,3 +40,26 @@ refactor(...)
 test(...)
 
 chore(...)
+
+-- Workflow --
+
+Sprint
+↓
+
+Develop
+
+↓
+
+Commit
+
+↓
+
+Push
+
+↓
+
+Update CHANGELOG
+
+↓
+
+Update ROADMAP
