@@ -65,3 +65,16 @@ Examples:
 - Composition over Inheritance
 - Testability First
 - Fidelity over Convenience
+
+## Core Layer
+
+The Core layer provides infrastructure shared by every subsystem.
+
+Responsibilities include:
+
+- Event communication
+- Shared services
+- Global state
+- Future plugin support
+
+The Core layer never depends on React.

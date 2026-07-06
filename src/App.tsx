@@ -1,5 +1,19 @@
+import { Services } from "./core";
+import type { FlightPlan } from "./domain/flightplan";
 import { Theme } from "./styles";
 export default function App() {
+    const flightPlan = Services.get<FlightPlan>("flightplan");
+
+if (!flightPlan.origin) {
+
+    flightPlan.setOrigin({
+        icao: "LEMD",
+        name: "Madrid-Barajas",
+        latitude: 40.472,
+        longitude: -3.561
+    });
+
+}
     return (
         <main
             style={{
@@ -12,7 +26,7 @@ export default function App() {
             }}
         >
             <div>
-                <h1>NeoFMS</h1>
+                <h1>{flightPlan.origin?.icao}</h1>
 
                 <p>Learn the system.</p>
 
